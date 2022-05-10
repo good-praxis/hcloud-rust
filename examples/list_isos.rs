@@ -9,6 +9,8 @@ async fn main() -> Result<(), String> {
         .nth(1)
         .ok_or("Please provide API token as command line parameter.")?;
 
+    let unused: String;
+
     // set up basic configuration using provided API token
     let mut configuration = Configuration::new();
     configuration.bearer_access_token = Some(api_token);
