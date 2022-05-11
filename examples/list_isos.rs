@@ -2,6 +2,8 @@ use hcloud::apis::configuration::Configuration;
 use hcloud::apis::isos_api;
 use std::env;
 
+// Benign change!
+
 #[tokio::main]
 async fn main() -> Result<(), String> {
     // use API token from command line
