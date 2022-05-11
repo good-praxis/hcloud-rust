@@ -37,6 +37,11 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: test
+          
+      - name: rust-clippy-check
+        uses: actions-rs/clippy-check@v1.0.7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check formatting
         uses: actions-rs/cargo@v1
