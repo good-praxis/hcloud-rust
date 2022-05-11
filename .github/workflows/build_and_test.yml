@@ -1,6 +1,5 @@
-on:
+on: 
   push:
-    branches:
   pull_request:
 
 name: Build and test
@@ -33,11 +32,6 @@ jobs:
         with:
           command: build
 
-      - name: Run tests
-        uses: actions-rs/cargo@v1
-        with:
-          command: test
-
       - name: Check formatting
         uses: actions-rs/cargo@v1
         with:
@@ -51,3 +45,9 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: --all-features
+
+      - name: Run tests
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+
